@@ -101,7 +101,7 @@ collections:
         - {label: Content, name: body, widget: markdown}
 - label: "Financial Reports"
   name: "finalcila reports"
-  folder: "content/investors/finalcial_reports"
+  folder: "content/investors/financial_reports"
   filter: {field: "type", value: "investors"}
   create: true
   fields:
@@ -169,7 +169,7 @@ collections:
   files:
     - label: "Financial Reports"
       name: "finalcial reports"
-      file: "content/investors/finalcial_reports/_index.md"
+      file: "content/investors/finanlcial_reports/_index.md"
       fields:
         - {label: Title, name: title, widget: string}
         - {label: Seo Title, name: seo_title, widget: string, required: false}
