@@ -163,7 +163,7 @@ collections:
   name: "Investor category"
   files:
     - label: "Financial Reports"
-      name: "finalcila reports"
+      name: "finalcial reports"
       file: "content/investors/finalcial_reports/_index.md"
       fields:
         - {label: Title, name: title, widget: string}
@@ -197,7 +197,7 @@ collections:
         - {label: Content, name: body, widget: markdown}
     - label: "Policies Code"
       name: "policies code"
-      file: "content/investor/policies_code/_index.md"
+      file: "content/investors/policies_code/_index.md"
       fields:
         - {label: Title, name: title, widget: string}
         - {label: Seo Title, name: seo_title, widget: string, required: false}
@@ -208,7 +208,7 @@ collections:
         - {label: Content, name: body, widget: markdown}
     - label: "Shareholder Services"
       name: "shareholder services"
-      file: "content/investor/shareholder_services/_index.md"
+      file: "content/investors/shareholder_services/_index.md"
       fields:
         - {label: Title, name: title, widget: string}
         - {label: Seo Title, name: seo_title, widget: string, required: false}
