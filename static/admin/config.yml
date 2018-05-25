@@ -169,7 +169,7 @@ collections:
   files:
     - label: "Financial Reports"
       name: "finalcial reports"
-      file: "content/investors/finanlcial_reports/_index.md"
+      file: "content/investors/financial_reports/_index.md"
       fields:
         - {label: Title, name: title, widget: string}
         - {label: Seo Title, name: seo_title, widget: string, required: false}
