@@ -185,8 +185,8 @@ collections:
         - {label: Type, name: type, widget: "hidden", default: "product_category"}
         - {label: Content, name: body, widget: markdown}
     - label: "Outcome"
-      name: "Outcome"
-      file: "content/investors/Outcome/_index.md"
+      name: "outcome"
+      file: "content/investors/outcome/_index.md"
       fields:
         - {label: Title, name: title, widget: string}
         - {label: Seo Title, name: seo_title, widget: string, required: false}
