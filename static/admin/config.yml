@@ -113,7 +113,7 @@ collections:
     - {label: Featured Image, name: featured_image, widget: image}
 - label: "Investor Calender"
   name: "investor calender"
-  folder: "content/movies/investor_calender"
+  folder: "content/investors/investor_calender"
   filter: {field: "type", value: "investors"}
   create: true
   fields:
@@ -125,7 +125,7 @@ collections:
     - {label: Featured Image, name: featured_image, widget: image}
 - label: "Outcome"
   name: "outcome"
-  folder: "content/movies/outcome"
+  folder: "content/investors/outcome"
   filter: {field: "type", value: "investors"}
   create: true
   fields:
@@ -137,7 +137,7 @@ collections:
     - {label: Featured Image, name: featured_image, widget: image} 
 - label: "Policies Code"
   name: "policies code"
-  folder: "content/movies/policies_code"
+  folder: "content/investors/policies_code"
   filter: {field: "type", value: "investors"}
   create: true
   fields:
@@ -149,7 +149,7 @@ collections:
     - {label: Featured Image, name: featured_image, widget: image}
 - label: "Shareholder Services"
   name: "shareholder services"
-  folder: "content/movies/shareholder_services"
+  folder: "content/investors/shareholder_services"
   filter: {field: "type", value: "investors"}
   create: true
   fields:
