@@ -1,0 +1,24 @@
+{{/* Get the current page's URL so we can compare it to the list below */}}
+{{ $currentPageUrl := .URL }}
+{{/* Get a list of this section's other pages. "RegularPages" excludes the list page    */}}
+{{ $currentSection := (where .Site.RegularPages "Section" .Section) }}
+{{/* Get the number of entries of  $currentSection and subtract 1 */}}
+{{ $i := sub ($currentSection | len) 1 }}
+{{/* So we can only show this menu if there are one or more other entries  */}}
+{{ if ge $i 1 }}
+<div class="flex items-start items-stretch nl3 nr3 flex-wrap">
+  {{ range $currentSection }}
+  <div class="ph3 w-100 w-50-m w-third-l mb2">
+    <div class="link db bg-white b--black-20 bb">
+      <div class="aspect-ratio w-100 aspect-ratio--16x9 mb3" data-aos="zoom-in">
+        <div class=" aspect-ratio--object z-2 bg-center cover" style="background-image: url(' {{ (trim .Params.featured_image "/") | absURL }}')"></div>
+      </div>
+    </div>
+    <div class=" items-start flex-wrap">
+      <p class="black tl b heading-font f3 mb2">{{.Title }}</p>
+      <a href="{{.URL}}" class="link bg-animate ba b--dark-red bg-white br2 dark-red hover-bg-dark-red hover-white bw1 dib pa1 f7 ph2 pv1 b mb2">Read More</a>
+    </div>
+  </div>
+  {{ end }}
+</div>
+{{ end }}

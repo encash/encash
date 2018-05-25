@@ -1,0 +1,25 @@
+{{ partial "header.html" . }}
+<link href="/dist/bb.min.css" rel="stylesheet"/>
+<script type="text/javascript" src="/dist/bb.min.js"></script>
+<h1 class="ph3 ph4-m ph6-l white tc bg-dark-red pv5 pv4-ns mb5 mt0 f2 f1-ns cover bg-bottom">GALLERY</h1>
+<article class="pt4">
+  <div class="px2 md-px4 pb4 pt1 ">
+    {{ $section := where .Data.Pages "Section" .Section }}
+    <div class="flex items-start mxn2 flex-wrap items-stretch ">
+      {{ range $section }}
+      <div class="ph3 w-100 w-50-m w-third-l ">
+        <a href="{{.URL}}" class="link db br2 bg-white ba b--black-20 mb4">
+          <div class="aspect-ratio w-100 aspect-ratio--16x9 mb4">
+            <div class=" aspect-ratio--object z-2 bg-center cover" style="background-image: url(' {{ (trim .Params.featured_image "/") | absURL }}')"></div>
+          </div>
+          <h3 class="ttu tracked red tc">{{.Title }}</h3>
+        </a>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</article>
+{{ partial "footer.html" . }}
+<script>
+baguetteBox.run('.gallery');
+</script>

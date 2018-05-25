@@ -1,0 +1,341 @@
+backend:
+  name: git-gateway
+  branch: master # Branch to update (optional; defaults to master)
+media_folder: "static/images"
+public_folder: "/images"
+collections:
+- label: "Latest Releases"
+  name: "Latest Releases"
+  folder: "content/movies/latest_releases"
+  filter: {field: "type", value: "movies"}
+  create: true
+  fields:
+    - {label: Title, name: title, widget: string}
+    - {label: Seo Title, name: seo_title, widget: string, required: false}
+    - {label: Seo Keywords, name: seo_keywords, widget: string, required: false}
+    - {label: Seo Description, name: seo_description, widget: text, required: false}
+    - {label: Type, name: type, widget: "hidden", default: "products"}
+    - {label: Featured Image, name: featured_image, widget: image}
+- label: "On Floor"
+  name: "on floor"
+  folder: "content/movies/on_floor"
+  filter: {field: "type", value: "movies"}
+  create: true
+  fields:
+    - {label: Title, name: title, widget: string}
+    - {label: Seo Title, name: seo_title, widget: string, required: false}
+    - {label: Seo Keywords, name: seo_keywords, widget: string, required: false}
+    - {label: Seo Description, name: seo_description, widget: text, required: false}
+    - {label: Type, name: type, widget: "hidden", default: "products"}
+    - {label: Featured Image, name: featured_image, widget: image}
+- label: "Our Releases"
+  name: "our releases"
+  folder: "content/movies/our_releases"
+  filter: {field: "type", value: "movies"}
+  create: true
+  fields:
+    - {label: Title, name: title, widget: string}
+    - {label: Seo Title, name: seo_title, widget: string, required: false}
+    - {label: Seo Keywords, name: seo_keywords, widget: string, required: false}
+    - {label: Seo Description, name: seo_description, widget: text, required: false}
+    - {label: Type, name: type, widget: "hidden", default: "products"}
+    - {label: Featured Image, name: featured_image, widget: image} 
+- label: "Upcoming Releases"
+  name: "upcoming releases"
+  folder: "content/movies/upcoming_releases"
+  filter: {field: "type", value: "movies"}
+  create: true
+  fields:
+    - {label: Title, name: title, widget: string}
+    - {label: Seo Title, name: seo_title, widget: string, required: false}
+    - {label: Seo Keywords, name: seo_keywords, widget: string, required: false}
+    - {label: Seo Description, name: seo_description, widget: text, required: false}
+    - {label: Type, name: type, widget: "hidden", default: "products"}
+    - {label: Featured Image, name: featured_image, widget: image}
+- label: "Movie Category"
+  name: "Movie category"
+  files:
+    - label: "Latest Releases"
+      name: "latest releases"
+      file: "content/movies/latest_releases/_index.md"
+      fields:
+        - {label: Title, name: title, widget: string}
+        - {label: Seo Title, name: seo_title, widget: string, required: false}
+        - {label: Seo Keywords, name: seo_keywords, widget: string, required: false}
+        - {label: Seo Description, name: seo_description, widget: text, required: false}
+        - {label: Featured Image, name: featured_image, widget: image}
+        - {label: Type, name: type, widget: "hidden", default: "product_category"}
+        - {label: Content, name: body, widget: markdown}
+    - label: "On Floor"
+      name: "on floor"
+      file: "content/movies/on_floor/_index.md"
+      fields:
+        - {label: Title, name: title, widget: string}
+        - {label: Seo Title, name: seo_title, widget: string, required: false}
+        - {label: Seo Keywords, name: seo_keywords, widget: string, required: false}
+        - {label: Seo Description, name: seo_description, widget: text, required: false}
+        - {label: Featured Image, name: featured_image, widget: image}
+        - {label: Type, name: type, widget: "hidden", default: "product_category"}
+        - {label: Content, name: body, widget: markdown}
+    - label: "Our Releases"
+      name: "our releaes"
+      file: "content/movies/our_releases/_index.md"
+      fields:
+        - {label: Title, name: title, widget: string}
+        - {label: Seo Title, name: seo_title, widget: string, required: false}
+        - {label: Seo Keywords, name: seo_keywords, widget: string, required: false}
+        - {label: Seo Description, name: seo_description, widget: text, required: false}
+        - {label: Featured Image, name: featured_image, widget: image}
+        - {label: Type, name: type, widget: "hidden", default: "product_category"}
+        - {label: Content, name: body, widget: markdown}
+    - label: "Upcoming Releases"
+      name: "upcoming releases"
+      file: "content/movies/upcoming_releases/_index.md"
+      fields:
+        - {label: Title, name: title, widget: string}
+        - {label: Seo Title, name: seo_title, widget: string, required: false}
+        - {label: Seo Keywords, name: seo_keywords, widget: string, required: false}
+        - {label: Seo Description, name: seo_description, widget: text, required: false}
+        - {label: Featured Image, name: featured_image, widget: image}
+        - {label: Type, name: type, widget: "hidden", default: "product_category"}
+        - {label: Content, name: body, widget: markdown}
+- label: "Financial Reports"
+  name: "finalcila reports"
+  folder: "content/investors/finalcial_reports"
+  filter: {field: "type", value: "investors"}
+  create: true
+  fields:
+    - {label: Title, name: title, widget: string}
+    - {label: Seo Title, name: seo_title, widget: string, required: false}
+    - {label: Seo Keywords, name: seo_keywords, widget: string, required: false}
+    - {label: Seo Description, name: seo_description, widget: text, required: false}
+    - {label: Type, name: type, widget: "hidden", default: "products"}
+    - {label: Featured Image, name: featured_image, widget: image}
+- label: "Investor Calender"
+  name: "investor calender"
+  folder: "content/movies/investor_calender"
+  filter: {field: "type", value: "investors"}
+  create: true
+  fields:
+    - {label: Title, name: title, widget: string}
+    - {label: Seo Title, name: seo_title, widget: string, required: false}
+    - {label: Seo Keywords, name: seo_keywords, widget: string, required: false}
+    - {label: Seo Description, name: seo_description, widget: text, required: false}
+    - {label: Type, name: type, widget: "hidden", default: "products"}
+    - {label: Featured Image, name: featured_image, widget: image}
+- label: "Outcome"
+  name: "outcome"
+  folder: "content/movies/outcome"
+  filter: {field: "type", value: "investors"}
+  create: true
+  fields:
+    - {label: Title, name: title, widget: string}
+    - {label: Seo Title, name: seo_title, widget: string, required: false}
+    - {label: Seo Keywords, name: seo_keywords, widget: string, required: false}
+    - {label: Seo Description, name: seo_description, widget: text, required: false}
+    - {label: Type, name: type, widget: "hidden", default: "products"}
+    - {label: Featured Image, name: featured_image, widget: image} 
+- label: "Policies Code"
+  name: "policies code"
+  folder: "content/movies/policies_code"
+  filter: {field: "type", value: "investors"}
+  create: true
+  fields:
+    - {label: Title, name: title, widget: string}
+    - {label: Seo Title, name: seo_title, widget: string, required: false}
+    - {label: Seo Keywords, name: seo_keywords, widget: string, required: false}
+    - {label: Seo Description, name: seo_description, widget: text, required: false}
+    - {label: Type, name: type, widget: "hidden", default: "products"}
+    - {label: Featured Image, name: featured_image, widget: image}
+- label: "Shareholder Services"
+  name: "shareholder services"
+  folder: "content/movies/shareholder_services"
+  filter: {field: "type", value: "investors"}
+  create: true
+  fields:
+    - {label: Title, name: title, widget: string}
+    - {label: Seo Title, name: seo_title, widget: string, required: false}
+    - {label: Seo Keywords, name: seo_keywords, widget: string, required: false}
+    - {label: Seo Description, name: seo_description, widget: text, required: false}
+    - {label: Type, name: type, widget: "hidden", default: "products"}
+    - {label: Featured Image, name: featured_image, widget: image}    
+- label: "Investor Category"
+  name: "Investor category"
+  files:
+    - label: "Financial Reports"
+      name: "finalcila reports"
+      file: "content/investors/finalcial_reports/_index.md"
+      fields:
+        - {label: Title, name: title, widget: string}
+        - {label: Seo Title, name: seo_title, widget: string, required: false}
+        - {label: Seo Keywords, name: seo_keywords, widget: string, required: false}
+        - {label: Seo Description, name: seo_description, widget: text, required: false}
+        - {label: Featured Image, name: featured_image, widget: image}
+        - {label: Type, name: type, widget: "hidden", default: "product_category"}
+        - {label: Content, name: body, widget: markdown}
+    - label: "Investor Calender"
+      name: "investor calender"
+      file: "content/investors/investor_calender/_index.md"
+      fields:
+        - {label: Title, name: title, widget: string}
+        - {label: Seo Title, name: seo_title, widget: string, required: false}
+        - {label: Seo Keywords, name: seo_keywords, widget: string, required: false}
+        - {label: Seo Description, name: seo_description, widget: text, required: false}
+        - {label: Featured Image, name: featured_image, widget: image}
+        - {label: Type, name: type, widget: "hidden", default: "product_category"}
+        - {label: Content, name: body, widget: markdown}
+    - label: "Outcome"
+      name: "Outcome"
+      file: "content/investors/Outcome/_index.md"
+      fields:
+        - {label: Title, name: title, widget: string}
+        - {label: Seo Title, name: seo_title, widget: string, required: false}
+        - {label: Seo Keywords, name: seo_keywords, widget: string, required: false}
+        - {label: Seo Description, name: seo_description, widget: text, required: false}
+        - {label: Featured Image, name: featured_image, widget: image}
+        - {label: Type, name: type, widget: "hidden", default: "product_category"}
+        - {label: Content, name: body, widget: markdown}
+    - label: "Policies Code"
+      name: "policies code"
+      file: "content/investor/policies_code/_index.md"
+      fields:
+        - {label: Title, name: title, widget: string}
+        - {label: Seo Title, name: seo_title, widget: string, required: false}
+        - {label: Seo Keywords, name: seo_keywords, widget: string, required: false}
+        - {label: Seo Description, name: seo_description, widget: text, required: false}
+        - {label: Featured Image, name: featured_image, widget: image}
+        - {label: Type, name: type, widget: "hidden", default: "product_category"}
+        - {label: Content, name: body, widget: markdown}
+    - label: "Shareholder Services"
+      name: "shareholder services"
+      file: "content/investor/shareholder_services/_index.md"
+      fields:
+        - {label: Title, name: title, widget: string}
+        - {label: Seo Title, name: seo_title, widget: string, required: false}
+        - {label: Seo Keywords, name: seo_keywords, widget: string, required: false}
+        - {label: Seo Description, name: seo_description, widget: text, required: false}
+        - {label: Featured Image, name: featured_image, widget: image}
+        - {label: Type, name: type, widget: "hidden", default: "product_category"}
+        - {label: Content, name: body, widget: markdown}                    
+- label: "Pages"
+  name: "pages"
+  files:
+    - label: "Home Page"
+      name: "home"
+      file: "content/_index.md"
+      fields:
+        - {label: Title, name: title, widget: string}
+        - {label: Seo Title, name: seo_title, widget: string, required: false}
+        - {label: Seo Keywords, name: seo_keywords, widget: string, required: false}
+        - {label: Seo Description, name: seo_description, widget: text, required: false}
+        - label: Slides
+          name: slides
+          widget: list
+          fields:
+            - {label: Image, name: image, widget: image}
+        - {label: Content, name: body, widget: markdown}
+    - label: "Movie"
+      name: "Movie"
+      file: "content/movies/_index.md"
+      fields:
+        - {label: Title, name: title, widget: string}
+        - {label: Seo Title, name: seo_title, widget: string, required: false}
+        - {label: Seo Keywords, name: seo_keywords, widget: string, required: false}
+        - {label: Seo Description, name: seo_description, widget: text, required: false}
+        - {label: Content, name: body, widget: markdown}
+    - label: "About"
+      name: "about"
+      file: "content/about/_index.md"
+      fields:
+        - {label: Title, name: title, widget: string}
+        - {label: Seo Title, name: seo_title, widget: string, required: false}
+        - {label: Seo Keywords, name: seo_keywords, widget: string, required: false}
+        - {label: Seo Description, name: seo_description, widget: text, required: false}
+        - {label: Featured Image, name: featured_image, widget: image}
+        - {label: Content, name: body, widget: markdown}
+    - label: "Studio"
+      name: "studio"
+      file: "content/studio/_index.md"
+      filter: {field: "type", value: "studio"}
+      create: true
+      fields:
+        - {label: Title, name: title, widget: string}
+        - {label: Seo Title, name: seo_title, widget: string, required: false}
+        - {label: Seo Keywords, name: seo_keywords, widget: string, required: false}
+        - {label: Seo Description, name: seo_description, widget: text, required: false}
+        - {label: Featured Image, name: featured_image, widget: image}
+        - {label: Order, name: order, widget: number, required: false}
+        - {label: Content, name: body, widget: markdown}
+    - label: "News"
+      name: "news"
+      file: "content/news/_index.md"
+      filter: {field: "type", value: "news"}
+      create: true
+      fields:
+        - {label: Title, name: title, widget: string}
+        - {label: Seo Title, name: seo_title, widget: string, required: false}
+        - {label: Seo Keywords, name: seo_keywords, widget: string, required: false}
+        - {label: Seo Description, name: seo_description, widget: text, required: false}
+        - {label: Featured Image, name: featured_image, widget: image}
+        - {label: Order, name: order, widget: number, required: false}
+        - {label: Content, name: body, widget: markdown}
+    - label: "Goal"
+      name: "goal"
+      file: "content/goal/_index.md"
+      fields:
+        - {label: Title, name: title, widget: string}
+        - {label: Seo Title, name: seo_title, widget: string, required: false}
+        - {label: Seo Keywords, name: seo_keywords, widget: string, required: false}
+        - {label: Seo Description, name: seo_description, widget: text, required: false}
+        - {label: Featured Image, name: featured_image, widget: image}
+        - {label: Content, name: body, widget: markdown}
+    - label: "Opportunities"
+      name: "opportunities"
+      file: "content/opportunities/_index.md"
+      fields:
+        - {label: Title, name: title, widget: string}
+        - {label: Seo Title, name: seo_title, widget: string, required: false}
+        - {label: Seo Keywords, name: seo_keywords, widget: string, required: false}
+        - {label: Seo Description, name: seo_description, widget: text, required: false}
+        - {label: Featured Image, name: featured_image, widget: image}
+        - {label: Content, name: body, widget: markdown}
+    - label: "Notice"
+      name: "notice"
+      file: "content/notice/_index.md"
+      fields:
+        - {label: Title, name: title, widget: string}
+        - {label: Seo Title, name: seo_title, widget: string, required: false}
+        - {label: Seo Keywords, name: seo_keywords, widget: string, required: false}
+        - {label: Seo Description, name: seo_description, widget: text, required: false}
+        - {label: Featured Image, name: featured_image, widget: image}
+        - {label: Content, name: body, widget: markdown}                     
+    - label: "Contact Page"
+      name: "contact"
+      file: "content/contact/_index.md"
+      fields:
+        - {label: Title, name: title, widget: string}
+        - {label: Seo Title, name: seo_title, widget: string, required: false}
+        - {label: Seo Keywords, name: seo_keywords, widget: string, required: false}
+        - {label: Seo Description, name: seo_description, widget: text, required: false}
+        - {label: Google Map Coordinates, name: google_map_coordinates, widget: string}
+        - {label: Featured Image, name: featured_image, widget: image}
+        - {label: Business Name, name: business_name, widget: string}
+        - {label: Business Location One, name: business_location_one, widget: string}
+        - {label: Business Location Two, name: business_location_two, widget: string}
+        - {label: Address One, name: address_one, widget: text}
+        - {label: Phone No One, name: phone_one, widget: string}
+        - {label: Fax One, name: Fax_one, widget: string}
+        - {label: Email One, name: email_one, widget: string}
+        - {label: Address Two, name: address_two, widget: text}
+        - {label: Phone No Two, name: phone_two, widget: string}
+        - {label: Fax Two, name: Fax_two, widget: string}
+        - {label: Email Two, name: email_two, widget: string}
+        - {label: Content, name: body, widget: markdown}
+    - label: "Meta"
+      name: "meta"
+      file: "data/meta.yml"
+      fields:
+        - {label: Page Background, name: background_image, widget: image}
+        - {label: Logo, name: logo, widget: image}
+        - {label: FB Cover, name: fb_cover, widget: image}
+            

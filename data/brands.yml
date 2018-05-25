@@ -1,0 +1,13 @@
+brands:
+  - name: Butter Jadoo
+    image: images/Butter-Jadu_New.png
+    content: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor .
+  - name: Cream Cracker
+    image: images/Cream-Cracker.png
+    content: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor .
+  - name: Elaichi Masti
+    image: images/Elaichi-Masti.png
+    content: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor .
+  - name: Top-A-Top
+    image: images/Top-A-Top_Final.png
+    content: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor .

@@ -1,0 +1,33 @@
+{{ partial "header.html" . }}
+<script src="{{ "js/siema.min.js" | absURL }}"></script>
+<section id="slider" class="siema">
+  {{ range .Params.slides }}
+  <div class="flex items-stretch items-center flex-wrap">
+    <div class="w-100">
+      <div class="aspect-ratio aspect-ratio--3x1">
+        <div class="aspect-ratio--object z-1 bg-center cover" style="background-image: url(' {{ (trim .image "/") | absURL }}')"></div>
+      </div>
+    </div>
+  </div>
+  {{ end }}
+</section>
+<div class="bg-red" style="height: 0.5em;"></div>
+<section class="pv5 bg-near-white ph3 ph4-m ph5-l">
+  <h2 class="f1 f1-ns w-100 f1 tc black mt0">About Us</h2>
+  {{ partial "separator.html" . }}
+  <div class="w-90 w-70-ns tc center f4 dark-gray">
+    {{.Content}}
+    <div class="tc">
+      <a href="/about" class="link bg-transparent bg-white ph2 pv2 br2 dark-red hover-bg-dark-red hover-white bw1 dib mv2 mx-auto bg-animate">Read More</a>
+    </div>
+  </div>
+</section>
+
+{{ partial "footer.html" . }}
+<script>
+if(siema_interval){
+clearInterval(siema_interval)
+}
+var mySiema=new Siema({duration:250,loop:true,});
+var siema_interval = setInterval(()=>mySiema.next(),5000)
+</script>

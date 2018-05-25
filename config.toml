@@ -1,0 +1,4 @@
+baseURL = "https://encashentertainment.netlify.com/"
+languageCode = "en-us"
+title = "ENCASH ENTERTAINMENT"
+theme = "sm-encashentertainment"

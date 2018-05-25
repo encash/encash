@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <title>{{.Title}}</title>
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:900|Open+Sans:400,700" rel="stylesheet">
+    <link href="{{ "css/main.css" | absURL }}" rel="stylesheet" type="text/css" />
+    <link href="{{ "css/animate.min.css" | absURL }}" rel="stylesheet" type="text/css" />
+    <!-- <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script> -->
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="{{ "js/aos.js" | absURL }}"></script>
+  </head>
+  <body class="overflow-x-hidden" style="padding-top:82px;">
+    <header>
+      <nav class="ph3 ph4-m ph5-l shadow-1 z-5 pv2 fixed top-0 left-0 right-0 flex items-center bg-black">
+        <div class="pr2 pt2">
+          <a href="/" class="link dib"><img src="{{ (trim .Site.Data.meta.logo "/") | absURL }}" alt="Jaya Biscuit" class="nt2" style="max-height:64px;"></a>
+        </div>
+        <div class="flex-auto">
+          <a href="/" class="link f4 ttu tracked navy b"></a>
+        </div>
+        <div class="tr dn db-l">
+          <a class="link pa2 ttu tracked f6 white b dib hover-bg-dark-red br2 hover-white" href="/">Home</a>
+          <a class="link pa2 ttu tracked f6 white b dib hover-bg-dark-red br2 hover-white" href="/about">About</a>
+          <a class="link pa2 ttu tracked f6 white b dib hover-bg-dark-red br2 hover-white" href="/movies">Movies</a>
+          <a class="link pa2 ttu tracked f6 white b dib hover-bg-dark-red br2 hover-white" href="/gallery">Gallery</a>
+          <a class="link pa2 ttu tracked f6 white b dib hover-bg-dark-red br2 hover-white" href="/studio">Studio</a>
+          <a class="link pa2 ttu tracked f6 white b dib hover-bg-dark-red br2 hover-white" href="/news">News</a>
+          <a class="link pa2 ttu tracked f6 white b dib hover-bg-dark-red br2 hover-white" href="/goal">Goal</a>
+          <a class="link pa2 ttu tracked f6 white b dib hover-bg-dark-red br2 hover-white" href="/opportunities">Opportunities</a>
+          <a class="link pa2 ttu tracked f6 white b dib hover-bg-dark-red br2 hover-white" href="/investors">Investors</a>
+          <a class="link pa2 ttu tracked f6 white b dib hover-bg-dark-red br2 hover-white" href="/notice">Notice</a>
+          <a class="link pa2 ttu tracked f6 white b dib hover-bg-dark-red br2 hover-white" href="/contact" data-turbolinks="false">Contact</a>
+        </div>
+       <div class="tr db dn-l ba pa2 br2 pointer bg-red" onclick="toggle_mobile_menu()">
+          <div class="bg-white mb1" style="height:4px; width:30px;"></div>
+          <div class="bg-white mb1" style="height:4px; width:30px;"></div>
+          <div class="bg-white" style="height:4px; width:30px;"></div>
+        </div>
+        <div id="mobile_nav" class="fixed top-0 right-0 bottom-0 w-80 w-50-m bg-white z-5 shadow-2 pv3 ph3 ph4-m dn">
+          <div class="flex items-start">
+            <a href="/" class="link flex-auto"><!-- <img src="{{ (trim .Site.Data.meta.logo "/") | absURL }}" alt="Jaya Biscuit" class="nt1" style="max-height:90px;"> --></a>
+            <div class="tr db ba ph2 pv1 br2 pointer b lh-solid f3 b-black black" onclick="toggle_mobile_menu()">X</div>
+          </div>
+          <a class="link pv3 ttu f6 dark-red b db bb b--black-20 db" href="/">Home</a>
+          <!-- <a class="link pv3 ttu f6 dark-red b db bb b--black-20 db" href="/brands">Our Brands</a> -->
+          <a class="link pv3 ttu f6 dark-red b db bb b--black-20 db" href="/about">About</a>
+          <a class="link pv3 ttu f6 dark-red b db bb b--black-20 db" href="/goal">Goal</a>
+          <a class="link pv3 ttu f6 dark-red b db bb b--black-20 db" href="/Opportunities">Opportunities</a>
+          <a class="link pv3 ttu f6 dark-red b db bb b--black-20 db" href="/contact" data-turbolinks="false">Contact</a>
+        </div>
+      </nav>
+    </header>

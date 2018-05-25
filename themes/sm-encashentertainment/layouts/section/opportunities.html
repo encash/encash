@@ -1,0 +1,15 @@
+{{ partial "header.html" . }}
+{{ partial "page_title.html" . }}
+<div class="flex items-stretch items-start flex-wrap flex-nowrap-l" style="margin-top:-4em;">
+      <main class="w-100 w-60-l flex flex-column product-on-home-page">
+        <div class="aspect-ratio aspect-ratio--3x1" style="height: 100%;">
+          <div class="aspect-ratio--object z-2 bg-center cover" style="background-image: url(' {{ (trim .Params.creative_image "/") | absURL }}')"></div>
+        </div>
+      </main>
+      <main class="ph3 ph4-m ph5-l pv3 pv4-ns w-100 w-60-l">
+        <div class="content">
+          {{ .Content }}
+        </div>
+      </main>
+  </div>
+{{ partial "footer.html" . }}

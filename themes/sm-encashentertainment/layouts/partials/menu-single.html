@@ -1,0 +1,74 @@
+{{/* Get the current page's URL so we can compare it to the list below */}}
+{{ $currentPageUrl := .URL }}
+{{/* Get a list of this section's other pages. "RegularPages" excludes the list page    */}}
+{{ $required_section := .Section }}
+{{ $required_parent := .Parent.Parent }}
+{{ $currentSection := ( index .Site.Pages ) }}
+{{ $all_pages := .Site.Pages }}
+{{/* Get the number of entries of  $currentSection and subtract 1 */}}
+{{ $i := sub ($currentSection | len) 1 }}
+{{/* So we can only show this menu if there are one or more other entries  */}}
+{{ if ge $i 1 }}
+<div class="w-100 w-30-m w-30-l br2 mr4-l">
+	<div class="bb bw1 pa2 red pl0">
+		<a href="/movies" class="link f6 f3-ns ttu tracked navy b">Movies</a>
+	</div>
+	<ul class="list-reset mb3 pl0" style="list-style: none;">
+		{{ range $currentSection }}
+		{{if eq .Parent $required_parent }}
+		{{ $required_title := .Title }}
+		
+		<li>
+			<i class="fa fa-caret-right absolute left-2 pv3 ph3 " aria-hidden="true" onclick="myFunction({{index ($required_title)}})"></i>
+			<a href="{{ .URL }}" class="sidelink{{ if eq $currentPageUrl .URL }} active{{end}} link navy caps">
+				{{ $required_title }}
+			</a>
+			<ul style="display:none" id="{{$required_title}}">
+				{{ range $all_pages }}
+				{{ if .Parent}}
+				{{if eq .Parent.Title $required_title}}
+				<li class="pl0" style="list-style:none">
+					<a href="{{ .URL }}" class="sidelink{{ if eq $currentPageUrl .URL }} active{{end}} link navy caps pa2"
+					id="{{$currentPageUrl}}" >{{ .Title }}</a>
+
+				</li>
+				{{ end }}
+				{{ end }}
+				{{ end }}
+			</ul>
+		</li>
+		{{ end }}
+		{{ end }}
+	</ul>
+</div>
+{{ end }}
+<script>
+function myFunction($data) {
+
+	console.log($data);
+	
+var x = document.getElementById($data);
+if (x.style.display === "none") {
+x.style.display = "block";
+} else {
+x.style.display = "none";
+}
+
+}
+
+	console.log('window.url');
+	var str = window.location.href;
+	var res = str.split("/");
+	var url = res[res.length-3];
+	console.log(url);
+	var id_array = url.split("_");
+	var id='';
+	for (var i = 0; i <= id_array.length - 1; i++) {
+		console.log(id_array[i]);
+		id=id+" "+id_array[i];
+	}
+	console.log(id);
+
+
+
+</script>
