@@ -111,6 +111,7 @@ collections:
     - {label: Seo Description, name: seo_description, widget: text, required: false}
     - {label: Type, name: type, widget: "hidden", default: "products"}
     - {label: Featured Image, name: featured_image, widget: image}
+    - {label: Content, name: body, widget: markdown}
 - label: "Investor Calender"
   name: "investor calender"
   folder: "content/investors/investor_calender"
@@ -123,6 +124,7 @@ collections:
     - {label: Seo Description, name: seo_description, widget: text, required: false}
     - {label: Type, name: type, widget: "hidden", default: "products"}
     - {label: Featured Image, name: featured_image, widget: image}
+    - {label: Content, name: body, widget: markdown}
 - label: "Outcome"
   name: "outcome"
   folder: "content/investors/outcome"
@@ -134,7 +136,8 @@ collections:
     - {label: Seo Keywords, name: seo_keywords, widget: string, required: false}
     - {label: Seo Description, name: seo_description, widget: text, required: false}
     - {label: Type, name: type, widget: "hidden", default: "products"}
-    - {label: Featured Image, name: featured_image, widget: image} 
+    - {label: Featured Image, name: featured_image, widget: image}
+    - {label: Content, name: body, widget: markdown} 
 - label: "Policies Code"
   name: "policies code"
   folder: "content/investors/policies_code"
@@ -147,6 +150,7 @@ collections:
     - {label: Seo Description, name: seo_description, widget: text, required: false}
     - {label: Type, name: type, widget: "hidden", default: "products"}
     - {label: Featured Image, name: featured_image, widget: image}
+    - {label: Content, name: body, widget: markdown}
 - label: "Shareholder Services"
   name: "shareholder services"
   folder: "content/investors/shareholder_services"
@@ -159,6 +163,7 @@ collections:
     - {label: Seo Description, name: seo_description, widget: text, required: false}
     - {label: Type, name: type, widget: "hidden", default: "products"}
     - {label: Featured Image, name: featured_image, widget: image}    
+    - {label: Content, name: body, widget: markdown}
 - label: "Investor Category"
   name: "Investor category"
   files:
@@ -175,7 +180,7 @@ collections:
         - {label: Content, name: body, widget: markdown}
     - label: "Investor Calender"
       name: "investor calender"
-      file: "content/investors/investor_calender/_index.md"
+      file: "content/investors/investor_calendar/_index.md"
       fields:
         - {label: Title, name: title, widget: string}
         - {label: Seo Title, name: seo_title, widget: string, required: false}
