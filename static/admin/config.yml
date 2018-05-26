@@ -4,6 +4,20 @@ backend:
 media_folder: "static/images"
 public_folder: "/images"
 collections:
+- label: "Gallery"
+      name: "gallery"
+      file: "content/gallery"
+      fields:
+        - {label: Title, name: title, widget: string}
+        - {label: Seo Title, name: seo_title, widget: string, required: false}
+        - {label: Seo Keywords, name: seo_keywords, widget: string, required: false}
+        - {label: Seo Description, name: seo_description, widget: text, required: false}
+        - {label: Featured Image, name: featured_image, widget: image}
+        - label: Gallery
+          name: gallery
+          widget: list
+          fields:
+            - {label: Image, name: image, widget: image}
 - label: "Latest Releases"
   name: "Latest Releases"
   folder: "content/movies/latest_releases"
