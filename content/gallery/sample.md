@@ -7,5 +7,6 @@ featured_image: /images/about.jpg
 gallery:
   - image: /images/back_ground _music.jpg
   - image: /images/color_correction.jpg
+  - image: /images/back_ground _music.jpg
 ---
 
