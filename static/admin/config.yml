@@ -6,7 +6,8 @@ public_folder: "/images"
 collections:
 - label: "Gallery"
       name: "gallery"
-      file: "content/gallery"
+      folder: "content/gallery"
+      create: true
       fields:
         - {label: Title, name: title, widget: string}
         - {label: Seo Title, name: seo_title, widget: string, required: false}
