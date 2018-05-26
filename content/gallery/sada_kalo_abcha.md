@@ -3,7 +3,6 @@ title: "Sada Kalo Abcha"
 seo_keywords: "ENCASH ENTERTAINMENT"
 seo_description: "ENCASH ENTERTAINMENT"
 featured_image: "images/Sada_Kalo_Abcha/1.jpg"
-type: "gallery"
 gallery:
   - image: /images/Sada_Kalo_Abcha/1.jpg
   - image: /images/Sada_Kalo_Abcha/2.png

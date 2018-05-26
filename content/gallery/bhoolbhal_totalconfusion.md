@@ -3,7 +3,6 @@ title: BhoolBhal Total Confusion
 seo_keywords: ENCASH ENTERTAINMENT
 seo_description: ENCASH ENTERTAINMENT
 featured_image: "images/bhoolbhal/1.jpg"
-type: "gallery"
 gallery:
   - image: /images/bhoolbhal/1.jpg
   - image: /images/bhoolbhal/2.jpg

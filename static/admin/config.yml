@@ -7,7 +7,6 @@ collections:
 - label: "Gallery"
   name: "gallery"
   folder: "content/gallery"
-  filter: {field: "type", value: "gallery"}
   create: true
   fields:
     - {label: Title, name: title, widget: string}
